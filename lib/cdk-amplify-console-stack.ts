@@ -15,10 +15,11 @@ export class AwsCdkAmplifyConsoleStack extends Stack {
         repository: 'amplify-car-rental-app',
         oauthToken: SecretValue.secretsManager('dev/amplify/github-access-token'),
       }),
-      // autoBranchCreation: {
-      //   patterns: ['*'],
-      //   basicAuth: BasicAuth.fromGeneratedPassword('username'),
-      // },
+      autoBranchCreation: {
+        patterns: ['*'],
+      //  patterns: ['feature/*', 'test/*'],
+      //  basicAuth: BasicAuth.fromGeneratedPassword('username'),
+      },
       autoBranchDeletion: true,
       buildSpec: codebuild.BuildSpec.fromObject(
         {
