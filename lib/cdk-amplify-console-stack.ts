@@ -23,7 +23,8 @@ export class AwsCdkAmplifyConsoleStack extends Stack {
       //inlinePolicies: {codeBuildProjectRoleInlinePolicy},
       managedPolicies: 
       [
-        ManagedPolicy.fromAwsManagedPolicyName('AdministratorAccess-Amplify')
+        ManagedPolicy.fromAwsManagedPolicyName('AdministratorAccess-Amplify'),
+        ManagedPolicy.fromAwsManagedPolicyName('AdministratorAccess')
       ]
     })
   
