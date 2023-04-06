@@ -1,3 +1,10 @@
+# Secure AWS AppSync with Amazon Cognito using the AWS CDK
+https://aws.amazon.com/blogs/mobile/secure-aws-appsync-with-iam-permissions-using-the-aws-cdk/
+https://github.com/focusOtter/appsync-cdk-cognito-fullstack
+
+
+
+
 # Configure AWS Amplify Console with AWS CDK
 
 ## TL;DR

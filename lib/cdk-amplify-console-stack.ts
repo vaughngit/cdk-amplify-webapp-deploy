@@ -52,21 +52,31 @@ export class AwsCdkAmplifyConsoleStack extends Stack {
             phases: {
               preBuild:{
                 commands: [
-                 // "amplifyPush --simple"
+                // "amplifyPush --simple"
                 ]
-              }
+              },
+            //   build: {
+            //     commands: [
+            //       "amplifyPush --simple"
+            //     ]
+            //   }
             }
           },
           frontend: {
             phases: {
               preBuild: {
                 commands: [
-                  "npm ci",
+                  //"npm ci",
                   "amplifyPush --simple",
+                  "npm ci",
                 ]
               },
               build: {
                 commands: [
+                 // "npm run build:$BUILD_ENV"
+                // "echo storage tables:",
+                // "echo $AMPLIFY_STORAGE_TABLES",
+                 //"amplifyPush --simple",
                   "npm run build"
                 ]
               }
